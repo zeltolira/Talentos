@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import jakarta.validation.Valid;
-import lira.talentos.talentos.adolescente.application.api.request.UsuarioResquest;
+import lira.talentos.talentos.adolescente.application.api.request.AdolescenteResquest;
 import lira.talentos.talentos.adolescente.application.api.response.AdolescenteResponse;
 
 @RestController
@@ -17,5 +17,5 @@ public interface AdolescenteAPI {
 
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
-	AdolescenteResponse postAdolescente(@Valid @RequestBody UsuarioResquest usuarioRequest);
+	AdolescenteResponse postAdolescente(@Valid @RequestBody AdolescenteResquest usuarioRequest);
 }
