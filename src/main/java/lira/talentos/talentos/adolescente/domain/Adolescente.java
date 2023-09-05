@@ -12,6 +12,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import lira.talentos.talentos.adolescente.application.api.request.AdolescenteResquest;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -40,5 +41,15 @@ public class Adolescente {
 	private Sexo sexo;
 	private LocalDateTime dataHoraDoCadastro;
 	private LocalDateTime dataHoraultimaAlteracao;
+	
+	
+	public Adolescente(AdolescenteResquest adolescenteRequest) {
+		this.nomeAdolescente = adolescenteRequest.getNomeAdolescente();
+		this.dataNascimento = adolescenteRequest.getDataNascimento();
+		this.celular = adolescenteRequest.getCelular();
+		this.sexo = adolescenteRequest.getSexo();
+		this.dataHoraDoCadastro = LocalDateTime.now();
+	}
+	
 	
 }
