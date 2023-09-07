@@ -1,4 +1,4 @@
-package lira.talentos.talentos.adolescente.application.service;
+package lira.talentos.talentos.adolescente.application.repository;
 
 import lira.talentos.talentos.adolescente.domain.Adolescente;
 

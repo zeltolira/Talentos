@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import lira.talentos.talentos.adolescente.application.api.request.AdolescenteResquest;
 import lira.talentos.talentos.adolescente.application.api.response.AdolescenteResponse;
+import lira.talentos.talentos.adolescente.application.repository.AdolescenteRepository;
 import lira.talentos.talentos.adolescente.domain.Adolescente;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

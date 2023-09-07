@@ -6,6 +6,8 @@ import java.util.UUID;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -29,8 +31,10 @@ public class Adolescente {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(columnDefinition = "uuid", name = "id", updatable = false, unique = true, nullable = false)
 	private UUID idAdolescente;
+	@NotBlank
+	@Column(unique = true)
+	private String documento;
 	@NotBlank
 	private String nomeAdolescente;
 	@NotNull
@@ -38,6 +42,7 @@ public class Adolescente {
 	@NotBlank
 	private String celular;
 	@NotNull
+	@Enumerated(EnumType.STRING)
 	private Sexo sexo;
 	private LocalDateTime dataHoraDoCadastro;
 	private LocalDateTime dataHoraultimaAlteracao;
@@ -45,11 +50,10 @@ public class Adolescente {
 	
 	public Adolescente(AdolescenteResquest adolescenteRequest) {
 		this.nomeAdolescente = adolescenteRequest.getNomeAdolescente();
+		this.documento = adolescenteRequest.getDocumento();
 		this.dataNascimento = adolescenteRequest.getDataNascimento();
 		this.celular = adolescenteRequest.getCelular();
 		this.sexo = adolescenteRequest.getSexo();
 		this.dataHoraDoCadastro = LocalDateTime.now();
 	}
-	
-	
 }

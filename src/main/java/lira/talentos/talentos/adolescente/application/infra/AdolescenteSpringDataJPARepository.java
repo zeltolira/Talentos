@@ -1,4 +1,4 @@
-package lira.talentos.talentos.adolescente.application.service;
+package lira.talentos.talentos.adolescente.application.infra;
 
 import java.util.UUID;
 

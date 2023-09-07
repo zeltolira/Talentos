@@ -1,7 +1,8 @@
-package lira.talentos.talentos.adolescente.application.service;
+package lira.talentos.talentos.adolescente.application.infra;
 
 import org.springframework.stereotype.Repository;
 
+import lira.talentos.talentos.adolescente.application.repository.AdolescenteRepository;
 import lira.talentos.talentos.adolescente.domain.Adolescente;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

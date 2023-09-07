@@ -12,10 +12,10 @@ import lira.talentos.talentos.adolescente.application.api.request.AdolescenteRes
 import lira.talentos.talentos.adolescente.application.api.response.AdolescenteResponse;
 
 @RestController
-@RequestMapping("/vi/adolescente")
+@RequestMapping("/v1/adolescente")
 public interface AdolescenteAPI {
 
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
-	AdolescenteResponse postAdolescente(@Valid @RequestBody AdolescenteResquest usuarioRequest);
+	AdolescenteResponse postAdolescente(@Valid @RequestBody AdolescenteResquest adolescenteRequest);
 }
